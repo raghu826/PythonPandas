@@ -7,5 +7,6 @@ print(a['Total Profit'].max()) # to get maximum profit
 
 print(a.columns) # to get list of columns
 
-print(a['Region'][a['Total Profit']==a['Total Profit'].max()]) # to get patricular
+print(a['Region'][a['Total Profit']==a['Total Profit'].max()]) # to get particular
 
+print(a[:]['Region'])  # to get a particular column
