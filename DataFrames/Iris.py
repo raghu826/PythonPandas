@@ -11,6 +11,7 @@ print(irisData.columns)
 newData = irisData.rename(columns={"Sepal.Length": "SepalLength","Petal.Length": "PetalLength",
                       "Sepal.Width": "SepalWidth","Petal.Width": "PetalWidth"})
 print(newData.columns)
+print(newData.describe()) # To get the stats of the DataSet
 
 # To plot PetalLength n SepalLength
 plt.scatter(newData.PetalLength, newData.SepalLength, color = 'red')
@@ -19,7 +20,7 @@ plt.ylabel("SepalLength")
 
 # To plot indicating species with different colors using seaborn
 sns.set_style('whitegrid')
-sns.FacetGrid(newData, hue = "Species", size =4 ).map(plt.scatter,"PetalLength","SepalLength").add_legend()
+sns.FacetGrid(newData, hue="Species", size =4 ).map(plt.scatter,"PetalLength","SepalLength").add_legend()
 plt.xlabel("PetalLength")
 plt.ylabel("SepalLength")
 plt.show()
